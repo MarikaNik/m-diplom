@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+
 .header {
   background-image: url("..//images/banner-bg.jpg");
   background-repeat: no-repeat;
@@ -58,7 +60,6 @@
   text-transform: uppercase;
   font-size: 13px;
   color: #ffffff;
-  font-weight: 400;
   font-family: "Open Sans";
   text-align: center; 
  
@@ -130,7 +131,7 @@
   margin-right: auto;
 }
 
-.block-title-h2 {
+.block-title-h3 {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 24px;
@@ -146,7 +147,7 @@
 
 .block {
   width: 25%;
-  min-height: 320px; /*вопрос*/
+  min-height: 320px; 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -192,10 +193,9 @@
 
 .block-content {
   max-width: 88%;
-  /*min-height: 111px;*/
   background-color: rgba(0,0,0,0);
   border: 3px solid #b59f5b;
-  padding: 40px 35px 35px 32px; /*корректировка?*/
+  padding: 40px 35px 35px 32px; 
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 18px;
@@ -204,7 +204,6 @@
 .content {
   display: flex;
   justify-content: space-between;
-  
 }
 
 .post-list {
@@ -214,17 +213,6 @@
 .section-post-list {
  display: flex;
  margin-bottom: 60px;
-}
-
-.picture {
-  width: 381px;
-  height: 294px;
-  background-color: #eff6f1;
-  margin-right: 30px;
-}
-
-.picture-img {
-  width: 381px;
 }
 
 .section-content {
@@ -256,12 +244,10 @@
   font-family: "Open Sans bold";
   text-transform: uppercase;
   list-style-type: none;
-  /*margin-bottom: 10px;*/
   }
 
 .category-content {
    margin-right: 20px;
-   /*margin-bottom: 20px;*/
   }
 
 .data-author {
@@ -569,6 +555,8 @@
 } 
 .product {
   max-width: 26%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product:last-child {
@@ -579,7 +567,7 @@
   margin-left: 25px;
 }
 
-.product__title-h2 {
+.product__title-h3 {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 24px;
@@ -611,14 +599,18 @@ font-family: "Open Sans bold";
  font-family: "Open Sans bold";
 }
 
+.product__body {
+ outline: solid 3px #b59f5b;
+ outline-offset: 20px;
+ flex-grow: 1;
+ margin-top: -10px;
+}
+
 .product__content {
-/*min-width: 29%;*/
-min-height: 227px;
-background-color: rgba(0,0,0,0);
-padding-top: 15px;
-outline: solid 3px #b59f5b;
-outline-offset: 20px;
-flex-grow: 1;
+ min-height: 210px;
+ background-color: rgba(0,0,0,0);
+ padding-top: 25px;
+ 
 }
 
 .product:nth-child(n+2) {
@@ -668,7 +660,7 @@ flex-grow: 1;
 }
 
 .shop {
-  margin-bottom: 70px;
+  margin-bottom: 90px;
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -677,7 +669,7 @@ flex-grow: 1;
 }
 
 .footer-socials {
-  width: 1170px;
+  max-width: 1170px;
   height: 83px;
   background-color: #f4f7f6;
   text-align: center;
@@ -729,7 +721,7 @@ background-image: url(..//svg/003-tumblr.svg);
 }
 
 .copyrights {
- width: 1170px;
+ max-width: 1170px;
  text-align: center;
   }
 
@@ -748,11 +740,43 @@ background-image: url(..//svg/003-tumblr.svg);
 }
 
 
-.popap {
-  width: 390px;
-  display: flex;
-  flex-direction: column;
+
+
+
+.popup {
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
+
+.hidden {
+ display: none;	
+}
+
+.popup::after {
+ position: absolute; 
+ content: "";
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #000000;
+ opacity: 0.6;
+ z-index: -1;
+}
+
+.popup-box {
+ position: fixed;
+ width: 390px;
+ display: flex;
+ flex-direction: column;
+ }
 
 .cl-btn {
   width: 20px;
@@ -763,22 +787,20 @@ background-image: url(..//svg/003-tumblr.svg);
   align-self: flex-end;
 }
 
-.popap-box {
+.popup-window {
   width: 390px;
   height: 590px;
-  border: 3px solid #f4f7f6; /*удалить*/
   display: flex;
   flex-direction: column;
-  /*justify-content: center;
-	align-items: center;*/
-}
+  background-color: #FFFFFF;
+  }
 
-.popap-title {
+.popup-title {
   margin-bottom: 25px;
   margin-top: 53px;
 } 
 
-.popap-title-h2 {
+.popup-title-h2 {
   font-size: 20px;
   color: #0f0d0e;
   font-family: "Open Sans bold";
@@ -788,7 +810,7 @@ background-image: url(..//svg/003-tumblr.svg);
   
   } 
 
-.popap-title:after {
+.popup-title:after {
   content: '';
   display: block;
   height: 3px;
@@ -851,7 +873,6 @@ background-image: url(..//svg/003-tumblr.svg);
  display: inline-block;
  width: 17px;
  height: 17px;
-
  background-image: url(..//svg/form-empty-circle.svg);
  background-repeat: no-repeat;
  background-position: center  center;
@@ -870,7 +891,7 @@ background-image: url(..//svg/003-tumblr.svg);
   margin-left: 15px;
 }
 
-radio:checked {
+.radio:checked {
   outline: 3px solid #000000;
   outline-offset: 5px;
 }
@@ -912,7 +933,420 @@ radio:checked {
 
 .button-send:hover {
   background-color: #323232;
+}
 
+@media (min-width: 1200px) {
+.menu__button {
+ display: none;
+ }
+
+ .picture {
+  width: 380px;
+  height: 294px;
+  background-color: #eff6f1;
+  margin-right: 30px;
+}
+
+.picture-img {
+ width: 380px;
+}
+}
+
+
+@media (min-width: 641px) and (max-width: 1199px) {
+
+.header {
+  background-image: url("..//images/banner-bg-tablet.jpg");
+  }
+
+ .header-top {
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ } 
+
+.menu-top {
+  display: none;
+  }
+
+.header-title {
+  width: 607px; 
+  }
+
+.header-title-h1 {
+  font-size: 40px;
+  line-height: 55px;
+  }
+
+.menu {
+ display: flex;
+ flex-direction: row-reverse;
+ align-items: center;
+}
+
+.menu__button-label {
+ width: 100%;
+ height: 26%;
+ border-radius: 5px;
+ background-color: #ffffff;
+ position: absolute;
+ left: 0;
+ top: 50%;
+}
+
+.menu__button {
+ width: 23px;
+ height: 23px;
+ border: none;
+ padding: 0;
+ background-color: transparent;
+ font-size: 25px;
+ position: relative;
+ text-indent: -9999px;
+ cursor: pointer;
+ }
+
+ .menu__button:before {
+  top: 0;
+}
+.menu__button:before, .menu__button:after {
+ content: "";
+ width: 100%;
+ height: 26%;
+ background-color: #ffffff;
+ position: absolute;
+ left: 0;
+}
+
+.logo {
+  width: 160px;
+  margin-right: auto;
+ }
+
+
+
+.content {
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 5%;
+  padding-left: 5%;
+ }
+
+.post-list {
+  min-width: 280px;
+  max-width: 390px;
+  margin-right: 5%;
+ }
+
+.section-post-list {
+ min-width: 280px;
+ max-width: 390px; 
+ display: flex;
+ flex-direction: column;
+ 
+ }
+
+.box-img {
+ display: flex;
+ justify-content: center;
+}
+
+ .picture {
+  min-width: 280px;
+  max-width: 381px; 
+  max-height: 294px;
+  background-color: #eff6f1;
+  }
+
+ img.picture-img {
+ max-width: 100%;
+ }
+
+ img.product__img {
+ max-width: 100%;
+
+ }
+
+.product {
+  max-width: calc(50% - 120px);
+  min-width: 250px;
+  justify-content: center;
+  margin-bottom: 55px;
+ }
+
+ 
+.product:nth-child(odd) {
+ margin-left: 60px;
+}
+
+.product:nth-child(even) {
+ margin-right: 60px;
+}
+
+ .products {
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+ .shop {
+  margin-bottom: 35px;
+ }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+
+.blocks {
+  flex-wrap: wrap;
+ }
+
+ .block {
+  width: 49%;
+  min-height: 250px; 
+ }
+
+ .block:nth-child(odd) {
+  margin-left: 5px;
+ } 
+
+ .block:nth-child(n+1) {
+  margin-bottom: 5px;
+ } 
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+
+.blocks {
+  display: flex;
+  flex-direction: row;
+} 
+
+.block {
+  width: 25%;
+  min-height: 250px; 
+}
+
+.block:nth-child(n+2) {
+  margin-left: 5px;
+} 	
+}
+
+@media (max-width: 640px) {
+  
+  .header {
+  background-image: url("..//images/banner-mobile.jpg");
+  min-height: 636px;
+  }
+
+  .menu-top {
+  display: none;
+  }
+
+  .header-content {
+  	align-items: center;
+  }
+
+  div.header-title {
+  max-width: calc(100% - 20px); 
+  margin: 0;
+  }
+
+.header-title-h1 {
+  font-size: 26px;
+  line-height: 36px;
+  }
+
+div.header-top {
+ flex-direction: column-reverse;
+ margin-bottom: 30px;
+ width: calc(100% - 20px); 
+ align-items: stretch;
+ }
+
+ div.logo {
+  width: 95%; 
+  align-self: center;
+  margin-right: 0;
+  padding-top: 180px;
+  padding-right: 10px;
+ }
+
+ .menu {
+ display: flex;
+ flex-direction: row-reverse;
+ align-items: center;
+}
+
+.menu__button-label {
+ width: 100%;
+ height: 26%;
+ border-radius: 5px;
+ background-color: #ffffff;
+ position: absolute;
+ left: 0;
+ top: 50%;
+}
+
+.menu__button {
+ width: 23px;
+ height: 23px;
+ border: none;
+ padding: 0;
+ background-color: transparent;
+ font-size: 25px;
+ position: relative;
+ text-indent: -9999px;
+ cursor: pointer;
+ }
+
+ .menu__button:before {
+  top: 0;
+}
+
+.menu__button:before, .menu__button:after {
+ content: "";
+ width: 100%;
+ height: 26%;
+ background-color: #ffffff;
+ position: absolute;
+ left: 0;
+}
+
+
+
+ .content {
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 5%;
+  padding-left: 5%;
+ }
+
+ .section-content {
+ 	max-width: 381px;
+ }
+
+ .section-post-list {
+ 	align-items: center;
+ }
+
+.post-list {
+  max-width: 100%;
+  margin-right: 5%;
+ }
+
+.section-post-list {
+  max-width: 100%;
+ display: flex;
+ flex-direction: column;
+ 
+ }
+
+ .picture {
+  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  }
+
+ img.picture-img {
+ max-width: 100%;
+ }
+
+ .side-bar {
+  width: 100%;
+ } 
+
+.search {
+ width: 100%;	
+}
+
+ .field-search {
+  width: 100%;
+ }
+
+ .field-email {
+  width: 100%;
+ }
+
+ .subscribe-button {
+  width: 100%;
+ }
+
+ .tags-group {
+  width: 100%;
+  }	
+
+ img.product__img {
+ max-width: 100%;
+ max-height: 100%;
+ background-position: center;
+
+ }
+
+.product {
+  max-width: calc(50% - 70px);
+  min-width: 250px;
+  justify-content: center;
+  margin-bottom: 55px;
+  }
+
+.products {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .shop {
+  margin-bottom: 35px;
+  justify-content: center;
+ }
+
+ .product:first-child {
+    margin-left: 0;
+}
+
+.product:nth-child(n+2) {
+    margin-left: 0;
+}
+
+.product:last-child {
+    margin-right: 0;
+ }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+
+.blocks {
+  flex-wrap: wrap;
+ }
+
+ .block {
+  width: 100%;
+  min-height: 230px; 
+  margin-bottom: 3px;
+ }
+
+.block:nth-child(n+2) {
+    margin-left: 0;
+ }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  
+  .blocks {
+  flex-wrap: wrap;
+ }
+
+ .block {
+  width: 49%;
+  min-height: 250px; 
+ }
+
+ .block:nth-child(odd) {
+  margin-left: 5px;
+ } 
+
+ .block:nth-child(n+1) {
+  margin-bottom: 5px;
+ } 
+}
 
 
   
