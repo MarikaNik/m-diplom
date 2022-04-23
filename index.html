@@ -16,7 +16,11 @@
       <div class="logo">
       <a href="#0"><img src="svg/noemi-logo.svg" alt="логотип"></a>
       </div>
+      
       <nav class="menu">
+      	 <button class="menu__button js-menu__button">
+          <span class="menu__button-label">открыть меню</span>
+         </button>
         <ul class="menu-top">
           <li class="menu-top-tab"><a class="menu-top-link" href="#0">главная</a></li>
           <li class="menu-top-tab"><a class="menu-top-link" href="#0">посты</a></li>
@@ -46,7 +50,7 @@
         <li class="category-content"><a class="category-link" href="#0">interior</a></li> 
               </ul>
               <div class="block-title">
-          <h2><a class="block-title-h2" href="#0">Сейчас в тренде: сад  на подоконнике</a></h2>
+          <h3><a class="block-title-h3" href="#0">Сейчас в тренде: сад  на подоконнике</a></h3>
     </div>
             </div>
           </div>
@@ -56,7 +60,7 @@
         <li class="category-content"><a class="category-link" href="#0">food</a></li>
              </ul>
                <div class="block-title">
-          <h2><a class="block-title-h2" href="#0">сыры на красивых  картинках из интернета: какие они на вкус?</a></h2>
+          <h3><a class="block-title-h3" href="#0">сыры на красивых  картинках из интернета: какие они на вкус?</a></h3>
     </div>
             </div>
           </div>
@@ -67,7 +71,7 @@
         <li class="category-content"><a class="category-link" href="#0">travel</a></li> 
               </ul>
                <div class="block-title">
-          <h2><a class="block-title-h2" href="#0">собираемся в первый поход в горы</a></h2>
+          <h3><a class="block-title-h3" href="#0">собираемся в первый поход в горы</a></h3>
     </div>
             </div>
           </div>
@@ -78,7 +82,7 @@
         <li class="category-content"><a class="category-link" href="#0">health</a></li> 
               </ul>
                <div class="block-title">
-          <h2><a class="block-title-h2" href="#0">Сейчас в тренде: сколько витаминов в лимоне?</a></h2>
+          <h3><a class="block-title-h3" href="#0">Сейчас в тренде: сколько витаминов в лимоне?</a></h3>
     </div>
             </div>
           </div>
@@ -90,7 +94,11 @@
  <main class="post-list">
     <article class="section-post-list"> 
      <div class="picture">
-        <img src="images/last-post1.jpg" class="picture-img" alt="фотография пляжа с уходящим человеком">
+     	<picture class="course__preview">
+        <!--<source media="(min-width: 641px)" srcset="images/last-post1.jpg">  
+         <source media="(max-width: 640px)" srcset="images/2.jpg"> -->
+		 <img src="images/last-post1.jpg" class="picture-img" alt="фотография пляжа с уходящим человеком">
+		</picture>
      </div>
      <div class="section-content">
       <ul class="category"> 
@@ -111,7 +119,11 @@
     </article>
     <article class="section-post-list"> 
       <div class="picture">
-        <img src="images/last-post2.jpg" class="picture-img" alt="фотография девушка занимается йогой">
+      	<picture class="course__preview">
+        <!-- <source media="(min-width: 641px)" srcset="images/last-post2.jpg">  
+         <source media="(max-width: 640px)" srcset="images/151.jpg"> -->
+		 <img src="images/last-post2.jpg" class="picture-img" alt="фотография девушка занимается йогой">
+		</picture>
      </div>
       <div class="section-content">
         <ul class="category"> 
@@ -132,7 +144,11 @@
      </article>
     <article class="section-post-list"> 
       <div class="picture">
-        <img src="images/last-post3.jpg" class="picture-img" alt="фотография девушка на концерте">
+        <picture class="course__preview">
+        <!-- <source media="(min-width: 641px)" srcset="images/last-post3.jpg">  
+         <source media="(max-width: 640px)" srcset="images/last-post3.jpg">-->
+		 <img src="images/last-post3.jpg" class="picture-img" alt="фотография девушка на концерте">
+		</picture>
      </div>
       <div class="section-content">
          <ul class="category"> 
@@ -153,7 +169,12 @@
      </article>
     <article class="section-post-list"> 
       <div class="picture">
-        <img src="images/last-post4.jpg" class="picture-img" alt="фотография тарелка на столе">
+      	<picture class="course__preview">
+         <!--<source media="(min-width: 641px)" srcset="images/last-post4.jpg">  
+         <source media="(max-width: 640px)" srcset="limages/501.jpg"> -->
+		 <img src="images/last-post4.jpg" class="picture-img" alt="фотография тарелка на столе">
+		</picture>
+        
       </div>
       <div class="section-content">
         <ul class="category"> 
@@ -174,7 +195,11 @@
      </article>
     <article class="section-post-list"> 
       <div class="picture">
-        <img src="images/last-post5.jpg" class="picture-img" alt="фотография подушка на стуле">
+      	<picture class="course__preview">
+         <!--<source media="(min-width: 641px)" srcset="images/last-post5.jpg">  
+         <source media="(max-width: 640px)" srcset="limages/last-post5.jpg"> -->
+		 <img src="images/last-post5.jpg" class="picture-img" alt="фотография подушка на стуле">
+		</picture>
       </div>
       <div class="section-content">
         <ul class="category"> 
@@ -205,7 +230,7 @@
         <div class="bar-content">
           <article class="side-bar-content">
           <div class="post-list-picture">
-             <img src="images/2.jpg" class="post-picture-img" alt="фотография человек на пляже">
+            <img src="images/2.jpg" class="post-picture-img" alt="фотография человек на пляже">
           </div>
           <div class="post-list-text">
             <time class="post-list-data">14 июня 2019</time>
@@ -325,11 +350,17 @@
  </div>
  <div class="products">
   <article class="product">
-        <div class="box-img">
-        <img class="product__img" src="images/shop-item-desk1.jpg" alt="Превью товара"> 
-      </div>
-        <div class="product__content minimum">
-          <h2 class="product__title-h2">подушки на диван</h2>
+    <div class="box-img">
+    	<picture class="course__preview">
+         <source media="(min-width: 1200px)" srcset="images/shop-item-desk1.jpg">  
+         <source media="(min-width: 641px and max-width: 1199px)" srcset="images/shop-item-tablet1.jpg">
+         <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+		 <img class="product__img" src="images/shop-item-desk1.jpg" alt="Превью товара">
+		</picture>
+    </div>
+    <div class="product__body">
+      <div class="product__content minimum">
+          <h3 class="product__title-h3">подушки на диван</h3>
           <div class="product__description">
             <p>Набор из двух подушек с модными принтами. Видео о создании <a class="shop-link" href="#0">здесь</a>.</p>
           </div>
@@ -343,16 +374,22 @@
           </div>
           <button class="product__button" type="button">в магазин</button>
         </div>
-        </div>
+      </div>
+    </div>
           
-    </article>
+  </article>
   <article class="product">
-        <div class="box-img">
-        <img class="product__img" src="images/shop-item-desk2.jpg" alt="Превью товара"> 
-          </div>
-        <div class="product__body">
+    <div class="box-img">
+    	<picture class="course__preview">
+         <source media="(min-width: 1200px)" srcset="images/shop-item-desk2.jpg">  
+         <source media="(min-width: 641px and max-width: 1199px)" srcset="images/shop-item-tablet2.jpg">
+         <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg">
+		 <img class="product__img" src="images/shop-item-desk2.jpg" alt="Превью товара"> 
+		</picture>
+    </div>
+    <div class="product__body">
         <div class="product__content">
-          <h2 class="product__title-h2">кукла «Зайчик»</h2>
+          <h3 class="product__title-h3">кукла «Зайчик»</h3>
           <div class="product__description">
             <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="shop-link" href="#0">весенняя серия постов</a> в блоге и несколько подкастов.</p>
              
@@ -365,18 +402,23 @@
            
           </div>
           <button class="product__button" type="button">в магазин</button>
-        </div>
+          </div>
         </div>
        
-      </div>
+    </div>
     </article>
   <article class="product">
         <div class="box-img">
-        <img class="product__img" src="images/shop-item-desk3.jpg" alt="Превью товара"> 
-      </div>
+         <picture class="course__preview">
+          <source media="(min-width: 1200px)" srcset="images/shop-item-desk3.jpg">  
+          <source media="(min-width: 641px and max-width: 1199px)" srcset="images/shop-item-tablet3.jpg">
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+		  <img class="product__img" src="images/shop-item-desk3.jpg" alt="Превью товара"> 
+		 </picture>
+        </div>
         <div class="product__body">
         <div class="product__content">
-          <h2 class="product__title-h2">шестиугольная рамка</h2>
+          <h3 class="product__title-h3">шестиугольная рамка</h3>
           <div class="product__description">
             <p>Необычная рамка для украшения дома из видео <a class="shop-link" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a></p>
           </div>
@@ -414,11 +456,12 @@
 </footer>
  
 
- <div class="popap">
+ <div class="popup hidden">
+  <div class="popup-box">
   <div class="cl-btn"></div>
-  <div class="popap-box">
-   <div class="popap-title">
-     <h2 class="popap-title-h2">ваш фидбек</h2>
+  <div class="popup-window">
+   <div class="popup-title">
+     <h2 class="popup-title-h2">ваш фидбек</h2>
    </div>
    <form class="form">
 	 <div class="form-row">
@@ -452,6 +495,7 @@
 	<button class="button-send">Отправить</button>
    </div>
    </form>
+ </div>
  </div>
 </div>         
 
